@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+     <link rel="stylesheet" type="text/css" href="{% static 'demoapp/sty.css' %}">
+</head>
+
+<body background="{% static 'demoapp/bg.jpg' %}">
+<center>
+
+    <h1> Feedback form </h1>
+    <form action="mail" method="post">
+    <table class="table1">
+    <tr>
+        <td><label for="name">Name</label></td>
+        <td><input type="text" name="rName" id="name"></td>
+    </tr>
+    <tr>
+        <td><label for="email">Email ID</label></td>
+        <td><input type="email" name="mail" id="email"></td>
+    </tr>
+    <tr>
+        <td><label for="list">Rate</label></td>
+        <td><select name = "rate" id="list">
+            <option value="ex"> Excellent</option>
+            <option value="sat"> Satisfied</option>
+            <option value="cb"> Could be better</option>
+        </select></td>
+    </tr>
+
+    <tr>
+           <td><label for="sug">Suggestions</label></td>
+           <td> <textarea name="txtarea" id="sug" cols="30" rows="10" name="sug"></textarea> </td>
+    </tr>
+    <tr>
+        <td><input type="submit"></td>
+    </tr>
+    </table>
+    </form>
+</center>
+</body>
+</html>
